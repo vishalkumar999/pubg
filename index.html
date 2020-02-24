@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pubg|Vishal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        section {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            background: url(bg.jpg) center center/cover no-repeat;
+            cursor: url(aim.png), pointer;
+        }
+
+        span {
+            background: url(hole.png) center center/cover no-repeat;
+            padding: 15px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="sec">
+
+    </section>
+
+
+    <script>
+        let sec = document.querySelector('section');
+
+
+        addEventListener('click', function (e) {
+            let secc = document.createElement("span");
+
+            let x = e.offsetX;//this is offsetX properties
+            let y = e.offsetY;//this is offsetY properties
+
+            //this is span
+
+            secc.style.top = y + 'px';
+            secc.style.left = x + 'px';
+
+            sec.appendChild(secc);
+            let audio = new Audio('sound.wav');
+            audio.play();
+
+            console.log(x);
+        })
+
+    </script>
+</body>
+
+</html>
